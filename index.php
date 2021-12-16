@@ -4,7 +4,7 @@ require_once("config.php");
 
 //Carrega um usuario
 //$raphael = new Usuario();
-//$raphael->loadbyId(7);
+//$raphael->loadbyId(10);
 //echo $raphael;
 
 //carrega uma lista de usuarios
@@ -16,8 +16,22 @@ require_once("config.php");
 //echo json_encode($search);
 
 //carrega um usuario usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("Raphael","123456");
+//echo $usuario;
+
+//insere mais um usuario
+//$aluno = new Usuario("aluno","@aluno");
+//$aluno->setDeslogin("aluno");
+//$aluno->setDessenha("peido");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("Raphael","123456");
+
+$usuario->loadById(11);
+
+$usuario->update("professor","peidinho");
 
 echo $usuario;
 
